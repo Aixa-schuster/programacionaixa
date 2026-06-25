@@ -1,0 +1,50 @@
+<div class="carrito">
+
+  <h2>🛒 Mi Carrito</h2>
+  @for(producto of productosCarrito; track producto.id){
+  <div
+    class="producto"
+    
+  >
+
+    <h3>{{ producto.nombre }}</h3>
+
+    <p>Precio: ${{ producto.precio }}</p>
+
+    <p>Cantidad: {{ producto.cantidad }}</p>
+
+    <div class="botones">
+
+      <button
+        (click)="aumentar(producto.id)"
+      >
+        +
+      </button>
+
+      <button
+        (click)="disminuir(producto.id)"
+      >
+        -
+      </button>
+
+      <button
+        class="eliminar"
+        (click)="eliminar(producto.id)"
+      >
+        Eliminar
+      </button>
+
+    </div>
+
+  </div>
+  }
+
+
+  <h2 class="total">
+
+    Total:
+    <!-- ${{ total() }} -->
+
+  </h2>
+
+</div>

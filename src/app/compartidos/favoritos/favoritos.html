@@ -1,0 +1,23 @@
+<h1>Favoritos</h1>
+
+<div class="card" *ngFor="let p of productosFavoritos">
+
+  <h2>Tus productos Favoritos</h2>
+
+  <h3>{{ p.titulo }}</h3>
+
+  <p>{{ p.descripcion }}</p>
+
+  <button (click)="disminuir(p.id)">
+    -
+  </button>
+
+  <button (click)="aumentar(p.id)">
+    +
+  </button>
+
+  <button (click)="eliminar(p.id)">
+    Eliminar
+  </button>
+
+</div>

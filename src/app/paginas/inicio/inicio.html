@@ -1,0 +1,156 @@
+<section class="hero">
+
+  <div class="hero-carousel">
+
+    <div class="slide active">
+      <img src="assets/imagen2.jpg" alt="">
+    </div>
+
+    <div class="slide">
+      <img src="assets/imagen3.jpg" alt="">
+    </div>
+
+    <div class="slide">
+      <img src="assets/imagen4.jpg" alt="">
+    </div>
+
+    <div class="slide">
+      <img src="assets/imagen45.jpg" alt="">
+    </div>
+
+  </div>
+
+  <div class="hero-content">
+    <h1>Schusterstudio</h1>
+    <p>Uñas que reflejan tu estilo ✨</p>
+  </div>
+
+</section>
+
+
+<section class="intro">
+
+  <h2>Bienvenida 💖</h2>
+
+  <p>
+    En Schusterstudio nos dedicamos a realzar tu belleza con diseños de uñas personalizados,
+    combinando técnica, creatividad y cuidado profesional.
+  </p>
+
+</section>
+
+<section class="services">
+
+  <h2>Profesionales💅</h2>
+
+  <div class="service-grid">
+
+    <div class="service">
+      <h3>Aixa Schuster</h3>
+      <p>
+        Servicios completos, Especializada en acrilico + Nail Art
+      </p>
+    </div>
+
+    <div class="service">
+      <h3>Luana Flores</h3>
+      <p>
+        Realiza servicios de Kapping, Esculpidas y acrilico
+      </p>
+    </div>
+    
+    <div class="service">
+      <h3>Maite Gonzalez</h3>
+      <p>
+        Especializada en esculpidas y acrilico 
+      </p>
+    </div>
+
+    <div class="service">
+      <h3>Ariana Nuñez</h3>
+      <p>
+        Profesional de manicura rusa y semipermente 
+      </p>
+    </div>
+
+    <div class="service">
+      <h3>Joana Quinteros</h3>
+      <p>
+        Dedicada a servicios de soft gel con acabado natural
+      </p>
+    </div>
+
+    <div class="service">
+      <h3>Clara Linares</h3>
+      <p>
+        Servicios semipermente mas Full Nail Art 
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="experience">
+
+  <div class="item">💅 Diseños personalizados</div>
+  <div class="item">✨ Productos de calidad</div>
+  <div class="item">⏱ Turnos organizados</div>
+
+</section>
+
+<section class="about">
+
+  <h2>Tu estilo, tu esencia</h2>
+
+  <p>
+    Cada diseño es creado pensando en vos. No hacemos uñas, creamos estilo.
+  </p>
+
+</section>
+
+<section class="gallery">
+
+  <h2>Algunos diseños</h2>
+
+  <div class="gallery-grid">
+    <div><img src="assets/diseño1.jpg" alt=""></div>
+    <div><img src="assets/diseño2.jpg" alt=""></div>
+    <div><img src="assets/diseño4.jpg" alt=""></div>
+    <div><img src="assets/diseño5.jpg" alt=""></div>
+    <div><img src="assets/diseño9.jpg" alt=""></div>
+    <div><img src="assets/diseño7.jpg" alt=""></div>
+  </div>
+
+</section>
+
+<section class="cta">
+
+  <h2>¿Lista para tu próximo diseño?</h2>
+
+</section>
+
+<script>
+
+let index = 0;
+
+const slides = document.querySelectorAll(".slide");
+
+function showSlide(){
+
+  slides.forEach(slide => {
+    slide.classList.remove("active");
+  });
+
+  slides[index].classList.add("active");
+
+  index++;
+
+  if(index >= slides.length){
+    index = 0;
+  }
+}
+
+setInterval(showSlide, 3000);
+
+</script>
