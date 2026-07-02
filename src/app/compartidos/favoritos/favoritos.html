@@ -1,23 +1,29 @@
-<h1>Favoritos</h1>
+<h1 class="titulo">Mis Favoritos ❤️</h1>
 
-<div class="card" *ngFor="let p of productosFavoritos">
+@if (productosFavoritos.length === 0) {
+  <div class="vacio">
+    <p>No tienes productos favoritos.</p>
+  </div>
+}
 
-  <h2>Tus productos Favoritos</h2>
+@if (productosFavoritos.length > 0) {
+  <div class="contenedor">
 
-  <h3>{{ p.titulo }}</h3>
+    @for (p of productosFavoritos; track p.id) {
+      <div class="card">
 
-  <p>{{ p.descripcion }}</p>
+        <h2>{{ p.nombre }}</h2>
 
-  <button (click)="disminuir(p.id)">
-    -
-  </button>
+        <p>{{ p.descripcion }}</p>
 
-  <button (click)="aumentar(p.id)">
-    +
-  </button>
+        <button
+          type="button"
+          (click)="eliminar(p.id)">
+          🗑 Eliminar
+        </button>
 
-  <button (click)="eliminar(p.id)">
-    Eliminar
-  </button>
+      </div>
+    }
 
-</div>
+  </div>
+}

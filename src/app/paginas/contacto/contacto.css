@@ -1,0 +1,98 @@
+.contacto {
+    padding: 70px 20px;
+    background: linear-gradient(180deg, #fff8fb, #ffeef5);
+    text-align: center;
+}
+
+.titulo h2 {
+    font-size: 40px;
+    color: #d63384;
+    margin-bottom: 10px;
+}
+
+.titulo p {
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(214, 51, 132, .12);
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(214, 51, 132, .20);
+}
+
+.card span {
+    font-size: 40px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #d63384;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #666;
+    margin: 6px 0;
+}
+
+.redes {
+    margin-top: 60px;
+}
+
+.redes h3 {
+    color: #d63384;
+    margin-bottom: 20px;
+}
+
+.iconos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.iconos a {
+    text-decoration: none;
+    background: #f8d7e6;
+    color: #b03060;
+    padding: 12px 24px;
+    border-radius: 30px;
+    transition: .3s;
+    font-weight: 600;
+}
+
+.iconos a:hover {
+    background: #d63384;
+    color: white;
+}
+
+@media (max-width: 768px) {
+
+    .titulo h2 {
+        font-size: 32px;
+    }
+
+    .iconos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}

@@ -1,1 +1,66 @@
-<p>registro works!</p>
+<section class="registro">
+
+    <div class="card">
+
+        <h1>💅 Schuster Studio</h1>
+
+        <h2>Crear cuenta</h2>
+
+        <input
+            type="text"
+            placeholder="Nombre"
+            [(ngModel)]="nombre">
+
+        <input
+            type="text"
+            placeholder="Apellido"
+            [(ngModel)]="apellido">
+
+        <input
+            type="email"
+            placeholder="Correo electrónico"
+            [(ngModel)]="email">
+
+        <input
+            type="password"
+            placeholder="Contraseña"
+            [(ngModel)]="password">
+
+        <input
+            type="password"
+            placeholder="Confirmar contraseña"
+            [(ngModel)]="confirmarPassword">
+
+        <button (click)="registrar()">
+            Registrarme
+        </button>
+
+        @if(error){
+
+            <p class="error">
+                {{ error }}
+            </p>
+
+        }
+
+        @if(mensaje){
+
+            <p class="ok">
+                {{ mensaje }}
+            </p>
+
+        }
+
+        <p class="login">
+
+            ¿Ya tenés cuenta?
+
+            <a routerLink="/inicio-sesion">
+                Iniciar sesión
+            </a>
+
+        </p>
+
+    </div>
+
+</section>

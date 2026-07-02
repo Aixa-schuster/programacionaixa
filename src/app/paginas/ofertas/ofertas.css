@@ -1,0 +1,151 @@
+.ofertas{
+
+    padding:70px 20px;
+    background:linear-gradient(180deg,#fff6fa,#ffe8f1);
+    text-align:center;
+
+}
+
+.ofertas h2{
+
+    font-size:42px;
+    color:#d63384;
+    margin-bottom:10px;
+
+}
+
+.subtitulo{
+
+    color:#666;
+    font-size:18px;
+    margin-bottom:40px;
+
+}
+
+.contador{
+
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-bottom:50px;
+
+}
+
+.contador div{
+
+    background:white;
+    width:110px;
+    padding:20px;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(214,51,132,.15);
+
+}
+
+.contador h3{
+
+    color:#d63384;
+    font-size:38px;
+    margin:0;
+
+}
+
+.contador span{
+
+    color:#666;
+
+}
+
+.cards{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    max-width:1100px;
+    margin:auto;
+
+}
+
+.card{
+
+    position:relative;
+    background:white;
+    border-radius:25px;
+    padding:35px;
+    box-shadow:0 12px 30px rgba(214,51,132,.15);
+    transition:.4s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-12px) scale(1.03);
+
+}
+
+.descuento{
+
+    position:absolute;
+    top:-15px;
+    right:20px;
+    background:#ff4d94;
+    color:white;
+    padding:10px 18px;
+    border-radius:25px;
+    font-weight:bold;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+
+}
+
+.card h3{
+
+    margin-top:25px;
+    color:#d63384;
+    font-size:26px;
+
+}
+
+.card p{
+
+    color:#666;
+    margin:20px 0;
+    line-height:1.6;
+
+}
+
+button{
+
+    background:#d63384;
+    color:white;
+    border:none;
+    padding:14px 28px;
+    border-radius:30px;
+    cursor:pointer;
+    transition:.3s;
+    font-size:16px;
+
+}
+
+button:hover{
+
+    background:#b02569;
+    transform:scale(1.05);
+
+}
+
+@media(max-width:768px){
+
+.contador{
+
+flex-direction:column;
+align-items:center;
+
+}
+
+.ofertas h2{
+
+font-size:34px;
+
+}
+
+}

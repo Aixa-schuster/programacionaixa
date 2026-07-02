@@ -1,27 +1,46 @@
 <main id="body">
 
-    @for(producto of productos; track producto.id){
+  @for (producto of productos; track producto.id) {
 
-        <div class="tarjeta">
+    <div class="tarjeta">
 
-            <div class="contenido">
+      <div class="contenido">
 
-                <img [src]="producto.imagen" [alt]="producto.nombre">
+        <img
+          [src]="producto.imagen"
+          [alt]="producto.nombre"
+        >
 
-                <h5>{{ producto.nombre }}</h5>
+        <h5>{{ producto.nombre }}</h5>
 
-                <p>
-                    {{ producto.descripcion }}
-                </p>
+        <p>
+          {{ producto.descripcion }}
+        </p>
 
-                <a href="#" class="btn">
-                    Comprar
-                </a>
+        <p>
+          <strong>${{ producto.precio }}</strong>
+        </p>
 
-            </div>
+        <button
+          type="button"
+          class="btn"
+          (click)="agregarCarrito(producto)"
+        >
+          Comprar
+        </button>
 
-        </div>
+        <button
+          type="button"
+          class="btn"
+          (click)="agregarFavorito(producto)"
+        >
+          ❤️
+        </button>
 
-    }
+      </div>
+
+    </div>
+
+  }
 
 </main>

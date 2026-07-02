@@ -1,1 +1,40 @@
-<p>inicio-sesion works!</p>
+<section class="login">
+
+    <div class="contenedor">
+
+        <h2>Bienvenida</h2>
+
+        <p>Iniciá sesión para continuar.</p>
+
+        <input
+            type="email"
+            placeholder="Correo electrónico">
+
+        <div class="password">
+
+            <input
+                [type]="mostrarPassword ? 'text' : 'password'"
+                placeholder="Contraseña">
+
+            <button
+                type="button"
+                (click)="togglePassword()">
+
+                {{ mostrarPassword ? '🙈' : '👁️' }}
+
+            </button>
+
+        </div>
+
+        <button
+            type="button"
+            class="principal"
+            (click)="iniciarSesion()">
+
+            Ingresar
+
+        </button>
+
+    </div>
+
+</section>

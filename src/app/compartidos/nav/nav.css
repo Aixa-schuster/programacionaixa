@@ -51,3 +51,21 @@
 .btn-pink:hover {
   background: #d63384;
 }
+.usuario{
+  margin-left: 20px;
+  font-weight: bold;
+  color: #d63384;
+  white-space: nowrap;
+}
+
+.navbar-nav{
+  gap: 8px;
+}
+
+.btn-pink{
+  transition: .3s;
+}
+
+.btn-pink:hover{
+  transform: scale(1.05);
+}

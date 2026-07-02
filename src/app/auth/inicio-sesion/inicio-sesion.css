@@ -1,0 +1,88 @@
+.login{
+
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#fff7fb,#ffe7f1);
+
+}
+
+.contenedor{
+
+    width:360px;
+    background:white;
+    padding:40px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(214,51,132,.15);
+
+}
+
+h2{
+
+    color:#d63384;
+
+}
+
+p{
+
+    color:#777;
+    margin-bottom:25px;
+
+}
+
+input{
+
+    width:100%;
+    padding:14px;
+    margin:10px 0;
+    border:none;
+    border-radius:15px;
+    background:#fff0f6;
+    box-sizing:border-box;
+
+}
+
+.password{
+
+    display:flex;
+    gap:10px;
+
+}
+
+.password input{
+
+    flex:1;
+
+}
+
+.password button{
+
+    width:55px;
+    border:none;
+    border-radius:15px;
+    cursor:pointer;
+    background:#f7d6e7;
+
+}
+
+.principal{
+
+    width:100%;
+    margin-top:20px;
+    padding:14px;
+    border:none;
+    border-radius:30px;
+    background:#d63384;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+
+}
+
+.principal:hover{
+
+    background:#b02669;
+
+}

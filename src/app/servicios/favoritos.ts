@@ -12,17 +12,30 @@ export class FavoritosService {
     return this.productosFavoritos;
   }
 
-  aumentarProducto(id: number): void {
-   
-  }
+  agregarProducto(producto: Producto): void {
 
-  disminuirProducto(id: number): void {
-   
+    const existe = this.productosFavoritos.find(
+      p => p.id === producto.id
+    );
+
+    if (!existe) {
+
+      this.productosFavoritos.push({
+        ...producto,
+        cantidad: 1
+      });
+
+    }
+
   }
 
   eliminarProducto(id: number): void {
-    this.productosFavoritos = this.productosFavoritos.filter(
-      p => p.id !== id
-    );
+
+    this.productosFavoritos =
+      this.productosFavoritos.filter(
+        p => p.id !== id
+      );
+
   }
+
 }

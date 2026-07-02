@@ -4,6 +4,7 @@ import { FavoritosService } from '../../servicios/favoritos';
 
 @Component({
   selector: 'app-favoritos',
+  standalone: true,
   imports: [],
   templateUrl: './favoritos.html',
   styleUrl: './favoritos.css'
@@ -16,25 +17,20 @@ export class Favoritos implements OnInit {
     private favoritosService: FavoritosService
   ) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
+
     this.productosFavoritos =
       this.favoritosService.obtenerProducto();
+
   }
 
-  total() {
-  }
-  aumentar(id: number) {
-    this.favoritosService.aumentarProducto(id);
-  }
+  eliminar(id: number): void {
 
-  disminuir(id: number) {
-    this.favoritosService.disminuirProducto(id);
-  }
-
-  eliminar(id: number) {
     this.favoritosService.eliminarProducto(id);
 
     this.productosFavoritos =
-    this.favoritosService.obtenerProducto();
+      this.favoritosService.obtenerProducto();
+
   }
+
 }

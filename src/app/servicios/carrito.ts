@@ -2,24 +2,20 @@ import { Injectable } from '@angular/core';
 import { Producto } from '../models/producto';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class CarritoService {
 
   productos: Producto[] = [];
 
-  obtenerProductos() {
-
+  obtenerProductos(): Producto[] {
     return this.productos;
-
   }
 
-  agregarProducto(producto: Producto) {
+  agregarProducto(producto: Producto): void {
 
     const productoExistente = this.productos.find(
-
-      (p => p.id === producto.id)
-
+      p => p.id === producto.id
     );
 
     if (productoExistente) {
@@ -28,32 +24,45 @@ export class CarritoService {
 
     } else {
 
-      this.productos.push(producto);
+      this.productos.push({
+        ...producto,
+        cantidad: 1
+      });
+
     }
 
   }
 
-  eliminarProducto(id: number) {
-    if (id !== -1) {
+  aumentarProducto(id: number): void {
 
-      this.productos.splice(id, 1);
+    const producto = this.productos.find(
+      p => p.id === id
+    );
 
+    if (producto) {
+      producto.cantidad++;
     }
+
   }
 
-  aumentarProducto(id: number) {
+  restarProducto(id: number): void {
 
-    const prod = this.productos.find(x => x.id == id )
-    if (prod){
-     prod.cantidad++;
+    const producto = this.productos.find(
+      p => p.id === id
+    );
+
+    if (producto && producto.cantidad > 1) {
+      producto.cantidad--;
     }
+
   }
 
-  restarProducto(id: number) {
+  eliminarProducto(id: number): void {
 
-    const prod = this.productos.find(x => x.id == id )
-    if (prod){
-     prod.cantidad--;
-    }
+    this.productos = this.productos.filter(
+      p => p.id !== id
+    );
+
   }
+
 }

@@ -9,28 +9,23 @@ import { InicioSesion } from './auth/inicio-sesion/inicio-sesion';
 import { Registro } from './auth/registro/registro';
 export const routes: Routes = [
 
-{ path: '', redirectTo: 'inicio', pathMatch: 'full' },
+    { path: 'contacto', component: Contacto },
 
-{ path: 'contacto', component: Contacto },
+    { path: '', redirectTo: 'inicio', pathMatch: 'full' },
 
-{ path: 'inicio',  component: Inicio },
+    { path: 'inicio', component: Inicio },
 
-{ path: 'ofertas', component:Ofertas },
+    { path: 'ofertas', component: Ofertas },
 
-{ path: 'productos', component:Productos },
-
-{ path: '**', redirectTo: 'inicio' },
-
-{ path: '', redirectTo: 'inicio', pathMatch: 'full' },
-
-{ path: 'carrito', component: Carrito },
-
-{ path: 'favoritos',  component: Favoritos },
-
-{ path: 'iniciosesion',  component: InicioSesion },
-
-{ path: 'registro',  component: Registro },
-
-{ path: '**', redirectTo: 'inicio' },
-
+    { path: 'productos', component: Productos },
+    
+    { path: 'carrito', component: Carrito },
+    
+    { path: 'favs', component: Favoritos },
+    
+    { path: 'iniciosesion', component: InicioSesion },
+    
+    { path: 'registro', component: Registro },
+    
+    { path: '**', redirectTo: 'inicio' },
 ];
